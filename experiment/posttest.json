@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "question": "The sensitivity of an LVDT is:",
+      "options": [
+        "a) The change in output voltage per unit displacement",
+        "b) The voltage at the null position",
+        "c) The range of displacement the LVDT can measure",
+        "d) The linearity of the LVDT output"
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "The output of an LVDT is:",
+      "options": [
+        "a) A direct current (DC) signal",
+        "b) An alternating current (AC) signal",
+        "c) A digital signal",
+        "d) None of the above"
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "The stroke length of an LVDT is ±150mm & generates 20mV/mm of resolution. So, 1). find the maximum o/p voltage",
+      "options": [
+        "a) 1 V",
+        "b) 2V",
+        "c) 3V",
+        "d) 4V"
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "The stroke length of an LVDT is ±150mm & generates 20mV/mm of resolution. So, 1). find the maximum o/p voltage once the core is shifted with 120mm from its null location:",
+      "options": [
+        "a) 2V",
+        "b) 2.2V",
+        "c) 2.4V",
+        "d) 2.6V"
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "The stroke length of an LVDT is ±150mm & generates 20mV/mm of resolution. So, find the position of core from middle once the o/p voltage is 2.5 V",
+      "options": [
+        "a) 100V",
+        "b) 125 V",
+        "c) 150V",
+        "d) 175V"
+      ],
+      "answer": "b"
+    }
+  ]
+}
