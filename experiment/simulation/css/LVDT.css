@@ -1,0 +1,92 @@
+
+
+
+
+.img-container{	
+	position:relative;
+	display:inline-block;	
+}
+
+
+#displacement{	
+position: absolute;
+    left: 76%;
+    top: 31%;
+    height: 6.5%;
+    width: 12.5%;
+    color: red;
+    font-size: 1vw;
+    background-color: black;
+    text-align: center;
+}
+
+#poff{	
+position: absolute;
+    left: 85%;
+    top: 18%;
+    height: 6.5%;
+    width: 6.5%;
+}
+#screw{	
+position: absolute;
+    right: 33%;
+    top: 78.2%;
+    height: 2.5%;
+    width: 0.5%;
+}
+#lvcore{	
+position: absolute;
+    left: 60%;
+    top: 78.2%;
+    height: 2.5%;
+    width: 6.2%;
+
+}
+#cirSc{
+position: absolute;
+    right: 5%;
+    top: 75.2%;
+    height: 12.5%;
+    width: 13.5%;
+    z-index: 2;
+}
+
+#gatis{
+position: absolute;
+    right: 4%;
+    top: 76.5%;
+    height: 10%;
+    width: 14.5%;
+    z-index: 1;
+    background-color: gray;	
+}
+
+#ratchet{
+position: absolute;
+    left: 96%;
+    top: 77.5%;
+    height: 7.5%;
+    width: 7.5%;
+    z-index: 2;
+}
+
+
+
+
+#rotateScrew{	
+position: absolute;
+    left: 70%;
+    top: 69.2%;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 

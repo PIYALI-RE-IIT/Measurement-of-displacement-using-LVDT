@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Calibration of Pressure Gauge using Dead Weight Gauge Calibrator</title>
+    <title>Measurement of Displacement using LVDT</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
    
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script  src="./js/dw_tester.js">   </script>
+  <script  src="./js/LVDT.js">   </script>
   
 
   
@@ -40,7 +40,7 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
 
-<link rel="stylesheet" href="./css/dw_tester.css">
+<link rel="stylesheet" href="./css/LVDT.css">
 
 	
 
@@ -52,47 +52,7 @@
 	max-width:100%;
 	}
 	
-	<!--.chartMenu {
-        width: 100vw;
-        height: 40px;
-        background: #1A1A1A;
-        color: rgba(54, 162, 235, 1);
-      }
-      .chartMenu p {
-        padding: 10px;
-        font-size: 20px;
-      }--
-      .chartCard {
-	  position:absolute;
-        width: 40%;
-        height: 40%;<!--calc(100vh - 40px);--
-		
-        background: transparent;<!--rgba(54, 162, 235, 0.2);--
-        display:flex;
-        align-items: center;
-        justify-content: center;
-      }-->
-      .chartBox {
-		position: absolute;
-		width: 17%;
-		height: 36%;
-		top: 6%;
-		left: 16%;
-		padding: 1px;
-		border-radius: 50px;
-		border: solid 4px rgba(54, 162, 235, 1);
-		border-top-left-radius: 60%;
-		border-top-right-radius: 62%;
-		border-bottom-left-radius: 60%;
-		border-bottom-right-radius: 62%;
-		background: white;
-      }
-	  
-	#myChart{
-	position:absolute;
-	padding: 0px;
-	top:-5%;
-	}
+	
   </style>
   
   
@@ -105,7 +65,7 @@
         <div class="row"><!--2nd row under 1st container start-->
             
             <div class="col-md-12"><!--2nd col under 2nd row start-->
-                <p class="h1"> <b>Calibration of Pressure Gauge using Dead Weight Gauge Calibrator </b> </p>
+                <p class="h1"> <b>Measurement of Displacement using LVDT </b> </p>
             </div><!--2nd col under 2nd row end-->
            
         </div><!--2nd row under 1st container end-->
@@ -122,50 +82,34 @@
             <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
               <div id="inst" style="display:none">
 			  <ol>
-                      <p>The experiment should be done in two parts. <br/>i) Loading, ii) Unloading</li></p>
+                      <p>In this experiment the maximum displacement that can be measured and given to LVDT core is : ±10 mm. i.e. 10 mm to the right or to the left from the mean position. Mean position is 10 mm.</li></p>
 					  
-					  <p>To calibrate the dead weight gauge, the barrel of the calibrator is filled with oil and the piston's weight as well as the area of its cross section are measured. Hence they are constant and known quantities.
-					  The Pressure Gauge can measure 0-1000 KPa pressure.</p><br/>
-  
-					  <b style = "color:blue">Loading</b><br/>
-					  <li><br/>
-					  At first drag 0.5 kg mass from the Mass Block and drop it to blue box on piston. The mass chosen, will be shown in 'Mass (kg)' input box. The piston will move downwards in the chamber due to pressure.
-					  </li><br/>
+					  <br/>
+					  <li><br/> Switch ON the LVDT trainer by clicking on green 'Power' button.</li><br/>
 					 
-					 <li>Click on the wheel to rotate it clockwise and to apply pressure in the filled oil inside. The  Pressure Gauge will show the applied pressure through wheel. When the pressure applied through
-						the wheel will be equal to the pressure caused by the chosen mass, the wheel will stop rotating and piston will move to its previous position (i.e upwards).</li></br>
+					 <li>Make micrometer to read 10 mm i.e. rotate thimble till 0 of the circular scale coincides with 10 of main scale. This can be done by clicking on plus sign on 'Rotate Gauge' button.
+					 (Ex:- for positive core displacement or to move the LVDT core towards left side click on plus sign on 'Rotate Gauge' button and similerly to move the core to right side click on minus sign on
+					 'Rotate Gauge' button.)</li></br>
+					 
+					 <li>Display (Displacement (mm) box in trainer) will indicate 0. This is the position when core is at centre i.e equal flux linking to both the secondary</li><br/>
 
 					 <li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the observation table.</li><br/> 
 					 
-					 <li>Similarly, drag 1-10 kg masses from the Mass Block one by one and drop it to blue box on piston. The total mass chosen, will be shown in 'Mass (kg)' input box. The piston will move downwards in the chamber due to pressure.
-					 Repeat steps 2-3 each time after a mass is chosen. After taking three to four successive observations click on 'Plot' button. The 'Percentage Error (&prcent;) vs. Gauge Reading (KPa)' plot will be shown.
-					 Hover the cursor on the plot, one camera icon will be visible in the top right corner above the plot section. Click on that camera icon to download the plot.</li><br/>
+					 <li>Again click on plus sign of 'Rotate Gauge' button to display 2 mm displacement and repeat step 3 each time after +2 mm displacement change . Continue untill display indicates +10 mm.
+						After taking observation of +10 mm displacement, come back to the mean position again (displacement in micrometer 10 mm or display will show 0 mm) by clicking on minus sign on 'Rotate Gauge' button.
+						Click on 'Add to Table' button again to tabulate this 0 mm displacement.</li><br/>
+						
+					<li>Now click on minus sign on 'Rotate Gauge' button to display -2 mm displacement, click on 'Add to Table' button to tabulate the data. Repeat step 3 each time after -2 mm displacement change . Continue untill
+					display indicates -10 mm.</li><br/>
+
+					 <li>Click on 'Plot' button. The 'Output Voltage (|E<sub>0</sub>|) vs. Core displacement (mm)' plot will be shown. Hover the cursor on the plot, one camera icon will be visible in the top right corner above the plot section.
+					 Click on that camera icon to download the plot.</li><br/>
 					 
-					 <li> Click on 'Clear' button to erase the observation data and plot. Click on 'Table' button to hide the observation table. </li><br/>
+					 <li> Switch off the trainer. Click on 'Clear' button to erase the observation data and plot. Click on 'Table' button to hide the observation table. </li><br/>
 					 
 					<br/><br/>
 					</ol>
 					
-					<ol>					
-					<b style = "color:blue">Unloading</b><br/>
-					<li><br/>
-					  After loading part is completed, drag the uppermost mass from the blue box on piston and drop it to Mass Block . The total mass left, will be shown in 'Mass (kg)' input box. The piston will move upwards from the chamber due to decrease in pressure.
-					  </li><br/>
-					 
-					 <li>Click on the wheel to rotate it anti-clockwise and to decrease pressure in the filled oil inside. The  Pressure Gauge will show the applied pressure through wheel. When the pressure applied through
-						the wheel will be equal to the pressure caused by the masses, left in the blue box, the wheel will stop rotating and piston will tend to move to its previous position (i.e upwards).</li></br>
-
-					 <li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the observation table.</li><br/> 
-					 
-					 <li>Similarly, drag other masses from blue box to the Mass Block one by one. The total mass chosen, will be shown in 'Mass (kg)' input box. The piston will move upwards from the chamber due to decrease in pressure again.
-					 Repeat steps 2-3 each time after a mass is kept back to the Mass Block. After taking three to four successive observations for unloading, click on 'Plot' button. The 'Percentage Error (&prcent;) vs. Gauge Reading (KPa)' plot will be shown.
-					 Hover the cursor on the plot, one camera icon will be visible in the top right corner above the plot section. Click on that camera icon to download the plot.</li><br/>
-					
-					<li> Click on 'Clear' button to erase the observation data and plot. Click on 'Table' button to hide the observation table. </li><br/>
-					
-					<br/><br/>
-					</ol>
-						 
 		   </div>
             </p> 
           </div><!--2nd col under 3rd container end-->
@@ -179,105 +123,56 @@
 	<div class="row my-5 gy-2">
 	
 	<div class="col-md-12">
-	
+	<input type="number" id="seudobox" value="0" style="visibility:hidden">
 	
 			<div   class="img-container">
 			
-			<img class="img-fluid" src="./images/base.png">
+			<img class="img-fluid" src="./images/plant.png">
 			
-			<!--<div class="chartCard">-->
-			<div class="chartBox" id="cb">
-			<canvas id="myChart"></canvas>
-			</div>
-			<input type="number" id="pressure" value="0"><p id="pspan">Pressure Gauge ( KPa )</p>
+			<img id="poff" src="./images/poff.png" onclick="power()">
 			
-			<div class=" p-2" id="drop_div" ondrop="drop(event);" ondragover="allowDrop(event)" style="display: block;position: absolute;top: 3%;left: 48%;width: 10%;height: 19%;border: 2px dotted #6fdee3; z-index:4" ></div>
-			<span id="mspan" >Mass ( Kg )</span><input type="number" id="massvalue" value = "0" readonly=readonly>
+			<img id="screw" src="./images/screw.png" >
+			<img id="lvcore" src="./images/core.png" >
 			
-			<img class="img-fluid" id = "disc" src="./images/weight.png" >
-			<img class="img-fluid" id = "chamber" src="./images/chamber.png">
-			<img class="img-fluid" id = "piston" src="./images/piston.png">
+			<img id="ratchet" src="./images/ratchet.png" >			
+			<div id ="gatis"></div>
+			<img id="cirSc" src="./images/cs6.png">
 			
-			<img class="img-fluid" id ="oiltank" src="./images/oiltank.png" >
-			<img class="img-fluid" id ="oil" src="./gif/oil.gif">
-			<img class="img-fluid" id ="wheel"   src="./images/w2.png" onclick="rotateToggle()">
-			
-			</div><br/><br/>
+			<button type="button" id="rotateScrew"  class="btn btn-success " disabled=disable>
+		 <i class="fa fa-plus"  onclick="rotategauge();cscalePosChng();screw_widthincr();core_widthdecr();Math_model()" style="color:white"></i>&nbsp;Rotate Gauge&nbsp;<i class="fa fa-minus"  onclick="rotategaugerev();cscalePosChngRev();screw_widthdecr();core_widthincr();Math_model()" style="color:white"></i>
+		</button>
 		
-	
-	
-	
+			<input type="number" id="displacement" value="0" readonly=readonly>
+			
+			
+			</div>	
+			<button type="button"  class="btn btn-info " onclick="CreateTable()" >Show Table</button>
+		<button type="button"   class="btn btn-success " onclick="plot()" >Plot</button>
+		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
 	</div>
 	
 	<!--<button class="btn btn-success" onclick="Dw_Tester()">Simulate</button>-->
 	</div>
 	
-		<div class="row my-5 gy-2"><!--- 1st row under fourth container start--->
 		
-			<div class="col-md-1" ></div>
-        
-			<div class="col-md-10" ><!--1st col under 1st row start -->
-			<p style="font-weight:bold;color:red">Mass Block</span>
-			<div   class="img-container">
-			<img class="img-fluid" src="./images/base.png" style="visibility:hidden;"><!--for giving a dimention-->
-			<div class="p-2 gy-4 text-center" id= "bricks" style="position:absolute;width:70%;top:10%;left:16%;border:2px solid black" ondrop="drop(event);" ondragover="allowDrop(event)">
-			<img class="img-fluid" id = "dischlf" src="./images/weightR.png" draggable="true" ondragstart="drag(event)" ><span style="position:absolute;top:0%;left:61%;font-size:1vw" >0.5 Kg </span><br/>
-			<img class="img-fluid" id = "disc1kg" src="./images/weightR.png" draggable="true" ondragstart="drag(event)" ><span style="position:absolute;top:17%;left:61%;font-size:1vw" >1 Kg </span><br/>
-			<img class="img-fluid" id = "disc1" src="./images/weightR.png" draggable="true" ondragstart="drag(event)" ><span style="position:absolute;top:34%;left:61%;font-size:1vw" >2.5 Kg </span><br/>
-			<img class="img-fluid" id = "disc2" src="./images/weightR.png" draggable="true" ondragstart="drag(event)"><span style="position:absolute;top:53%;left:61%;font-size:1vw" >5 Kg </span><br/>
-			<img class="img-fluid" id = "disc3" src="./images/weightR.png" draggable="true" ondragstart="drag(event)"><span style="position:absolute;top:72%;left:61%;font-size:1vw" >10 Kg </span><br/>
-			</div>			
-		  
-				</div><!--img container div end--><br>
-			<button type="button" onclick="CreateTables()" class="btn btn-primary" >Add to Table</button>
-			<button type="button" onclick="plot()" class="btn btn-success" >Plot</button>
-			<button type="button" id="refresh" onclick="Refresh()" class="btn btn-danger" >Clear</button>
-			</div>		
-			<div class="col-md-1" ></div>		
-			</div><!---end of 1st col under 1st row--->	
-			
-                
-	<div class="row"><!--- 2nd row under fourth container start--->
-	
-		
+	<div class="row"><!--- 2nd row under fourth container start--->		
 		
 			<div class="col-md-12 "><!--2nd col under 2nd row start -->	
-			<input type="number" id="chkload" min="1" value="1" max="2" style="visibility:hidden">
+			
 			
 			<div><a class="nav-link" data-bs-toggle="tab"  id="myTables" style="background-color:#128BD9" ><span class=" h3 text-dark"> Table </span></a>
-			<p id="loadst" style="display:none;">Loading</p><br/>
-			<table id="loading" style="display:none;width:100%">			
+			
+			<table id="obsTable" style="display:none;width:100%">			
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>Mass of weight (Kg)</th> 
-					<th>Mass of Piston (Kg)</th>
-					<th>Total Mass(Kg)</th>
-					<th>Force (F)(m &times; g Newton)</th>
-					<th>Diameter of Piston (d)(meter)</th>
-					<th>Area of Piston (A)(meter<sup>2</sup>)</th>
-					<th>Actual Pressure $$\frac{F}{A}$$(KPa)</th>
-					<th>Measured Pressure (KPa)</th>
-					<th>&percnt; Error (KPa)</th>
+					<th>Displacement Indicated by Micrometer(mm)</th> 
+					<th>Core displacement (mm)</th>
+					<th>Output voltage (|E<sub>o</sub> |)(mV)</th>
 				  </tr>
 				  
 			</table>
-			<!--<table id="unloading" style="display:none;width:100%">			
-				
-				   <tr>
-					<th>Sl No.</th>
-					<th>Mass of weight (Kg)</th> 
-					<th>Mass of Piston (Kg)</th>
-					<th>Total Mass(Kg)</th>
-					<th>Force (F)(m &times; g Newton)</th>
-					<th>Diameter of Piston (d)(meter)</th>
-					<th>Area of Piston (A)(meter<sup>2</sup>)</th>
-					<th>Actual Pressure $$\frac{F}{A}$$(KPa)</th>
-					<th>Measured Pressure (KPa)</th>
-					<th>&percnt; Error (KPa)</th>
-				  </tr>
-				  
-			</table>-->		
+			
 			</div>	
 				</div>				
 		
@@ -288,12 +183,6 @@
 		
 	 
 			<div class="col-md-12">
-				<!--<div id = "plotbucket" class="content-center" style="display:none; position relative; border:3px solid white;height:530px;width:823px ">
-				<button type="button" id="exportChart" class="btn btn-primary"  style="display:none;position:absolute;left:28%;">Download Plot</button>
-				<button type="button" id="result" class="btn btn-primary" onclick="Refresh()"  style="display:none;position:absolute;left:35%">OK</button><br/><br/>
-					<div id="chartContainer"  style="display:none; position:absolute; height: 40%; width: 40%;z-index:1 "></div>
-					
-				</div>-->
 				
 				<div align="center" id="myPlot" style="width:100%;max-width:700px;padding-left:10%"></div>
 				
@@ -327,236 +216,7 @@
       </div>
   </div><!--Last and fifth container under body tag end-->
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-	
-    <script>
-	<!--------------------------GAUGE CHART WITH CANVAS AND CHART.JS-------------------------------------->
-	<!--------------------------DEVELOPER: PIYALI CHATTERJEE-------------------------------------->
-	<!--------------------------PROJECT SCIENTIST-TECHNICAL,IIT KGP-------------------------------------->
-    // setup 
-	
-    const data = {
-      labels: ['0', '600'],
-      datasets: [{
-        label: 'Weekly Sales',
-        data: [0, 1000],
-        backgroundColor: ['#0983C8','#C3C4C5'],
-		needleValue:0,
-        borderColor: "white",
-        borderWidth: 2,
-		cutout: "90%",
-		circumference: 280,
-		rotation: 220,
-      }]
-    };
-	///Needle block
-	const gaugeNeedle = {
-	
-	id:'gaugeNeedle',
-	afterDatasetDraw(chart,args,options){
-	
-	const {ctx,config,chartArea:{top,bottom,left,right,width,height}} = chart;
-	
-	ctx.save();
-	//console.log(ctx);
-	//const hp = math.subtract(ctx.canvas.offsetTop,math.divide(2,100));
-	const needleValue = data.datasets[0].needleValue;
-	const dataTotal = data.datasets[0].data.reduce ((a,b)=> a+b,0);
-	const angel = (2.73*Math.PI) + (1/dataTotal*1.5*needleValue*Math.PI);
-	const cx = width/2;
-	const cy = chart._metasets[0].data[0].y;
-	const cz = cy/2;
-	//console.log(ctx);
-	
-	///Needle
-	//var a = 100*(50/100);
-	ctx.translate(cx,cy);
-	ctx.rotate(angel);
-	ctx.beginPath();
-	ctx.moveTo(0,-2);
-	ctx.lineTo(ctx.canvas.height - 100, 0);
-	ctx.lineTo(0,2);
-	ctx.fillStyle = "#444";
-	ctx.fill();
-	ctx.restore();
-	///needle dot
-	//ctx.translate(-cx,-cy);
-	ctx.beginPath();
-	ctx.arc(cx,cy,5,0,10);
-	ctx.fill();
-	ctx.restore();	
-	
-	ctx.font ='20px Helvetica';
-	ctx.fillStyle = '#0983C8';
-	//ctx.fillText(needleValue +"Kpa", cx, cz + 10 );
-	ctx.textAlign = 'center';
-	ctx.restore();
-	}	
-	}
-	
-    // config 
-    const config = {
-      type: 'doughnut',
-      data,
-      options: {
-	  
-	  plugins: {
-	  
-	  legend:{
-	
-	display:false
-	
-	},
-	
-	toolTip: {
-	
-	yAlign: 'top',
-	displayColors: true,
-	
-	} 
-	  
-	  }
-	  
-      },
-	  plugins:[gaugeNeedle]
-    };
-
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-///end of Pressure Gauge
-	
-///starting functions to indicate pressure value,where total pressure is 1000 the range is 0-1000 kpa.	
-var Interval,nValue,finalV = 1000;
-	
-function updateChart(){
-
-	Dw_Tester();
- nValue = math.round(myChart.data.datasets[0].needleValue);
- 
-//var editedValue = math.add(needleValue,incr);
- //for(nValue = 0;nValue <= 1000; nValue++){
- myChart.data.datasets[0].data[0] = nValue;//[nValue,(600 - nValue)];///pushing a new value to an array of data
- myChart.data.datasets[0].data[1] = (1000 - nValue);
- console.log('nValue =' + nValue);
- console.log('IndicatedValue =' + IndicatedValue);
- //console.log('remaining =' + (1000 - nValue));
- 
- if(nValue < IndicatedValue && document.getElementById("chkload").value == 1){///loading
- nValue++;
- myChart.data.datasets[0].needleValue = nValue;
- document.getElementById('pressure').value = myChart.data.datasets[0].needleValue;
- }
- 
- if(nValue > IndicatedValue && document.getElementById("chkload").value == 2){
- nValue--;
- 
- myChart.data.datasets[0].data[0] = nValue;
- myChart.data.datasets[0].needleValue = nValue;
- document.getElementById('pressure').value = myChart.data.datasets[0].needleValue;
- 
- }
- 
- else if(math.round(nValue) == math.round(IndicatedValue)){
- myChart.data.datasets[0].needleValue = IndicatedValue;
- document.getElementById('pressure').value = IndicatedValue;
- stopWheel();
- piston_positionUp();
- stopUpdate();
- }
- 
- //myChart.data.datasets[0].data.push(50);///push array[0] value in chart 
- //chart.data.datasets[0].backgroundColor.push("green");///change a particular data background color
   
- myChart.update();///to show gauge pressure in indicated value
- 
- }
- 
- ///calling function updateChart() for continously running the Pressure Gauge.
- function autoUpdateChart(){
- 
- clearInterval(Interval);
- Interval = setInterval(updateChart, 100);
- 
- }
- 
- //setTimeout(stopWheel, 5000);///to stop the wheel rotation after reaching indicated value pressure
-//setTimeout(piston_positionUp, 5000);///piston will pop up after reaching the indicated pressure value
- //setTimeout(stopUpdate, 5000);
- //}
- 
- ///stop the Pressure Gauge whenever required
- function stopUpdate(){
- 
- //if(nValue == 1000){
- clearInterval(Interval);
- //}
- 
- }
-    // Instantly assign Chart.js version
-    //const chartVersion = document.getElementById('chartVersion');
-   // chartVersion.innerText = Chart.version;
-    </script>
-
-<!--------------------------------------------------------GAUGE CHART USING CHART JS GENERAL--------------------------------------->	
-	
- <!--<script>
- 
- let ctx = document.getElementById("gaugechart").getContext('2d');
- let chart = new Chart(ctx, {
- 
- ///the type of chart we want to create
- type:'doughnut',
- 
- data: {
- 
- labels: ["january","feb","jun"],
- 
- ///the data for our dataset
- datasets: [{
- 
-		label:"Pressure Gauge",
-		backgroundColor: ['red','green','aqua'],
-		borderColor:['red','green','aqua'],
-		data:[3,5,10],
-		
-		}] 
- 
- },
- 
- ///configuration options go here
- options:{
-	legend:{
-	
-	display:false
-	
-	},
-	
-	circumference: 1*Math.PI,
-	rotation: 1*Math.PI,
-	cutoutPercentage:90
- 
- }
- 
- });
- 
- function updateChart(){
- 
- //chart.data.datasets[0].data = [20,5,10];///pushing a new value to an array of data
- chart.data.datasets[0].data.push(50);///push array[0] value in chart
- chart.data.datasets[0].backgroundColor.push("green");///change a particular data background color
- 
- 
- chart.update();
- 
- }
- 
- chart.update();
- </script> --> 
 
 </body><!--body tag end-->
 
